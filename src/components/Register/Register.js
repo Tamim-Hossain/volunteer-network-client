@@ -12,7 +12,7 @@ const Register = () => {
         console.log(data)
     };
     return (
-        <div className="mx-auto border p-3" style={{ width: '40%' }}>
+        <div className="mx-auto border p-4 rounded" style={{ width: '40%' }}>
             <h3 className="font-weight-bold text-center">Register as a Volunteer</h3>
             <form onSubmit={handleSubmit(onSubmit)}  >
                 <label htmlFor="name">Name</label>
@@ -32,7 +32,7 @@ const Register = () => {
                 {errors.date && <span className="text-danger">Date is required</span>}
                 <br />
                 <label htmlFor="description">Description</label>
-                <textarea className="form-control" id="description" placeholder="Description" name="description" type="text" ref={register({ required: true })} />
+                <textarea className="form-control" id="description" placeholder="Description..." name="description" type="text" ref={register({ required: true })} />
                 {errors.description && <span className="text-danger">Description is required</span>}
                 <br />
                 <input type="submit" className="btn btn-success mt-2 btn-block" />
