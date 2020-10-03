@@ -15,8 +15,8 @@ const Header = () => {
                     <Link to="#" className="btn m-1">Donation</Link>
                     <Link to="#" className="btn m-1">Events</Link>
                     <Link to="#" className="btn m-1">Blog</Link>
-                    <Link to="/login" className="btn m-1 btn-info text-white">Register</Link>
-                    <Link to="/login" className="btn m-1 btn-secondary text-white">Admin</Link>
+                    <Link to="/register" className="btn m-1 btn-info text-white">Register</Link>
+                    <Link to="/admin" className="btn m-1 btn-secondary text-white">Admin</Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

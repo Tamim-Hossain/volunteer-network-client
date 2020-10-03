@@ -3,7 +3,7 @@ import { Card } from 'react-bootstrap';
 
 const Event = ({ event: { name, img } }) => {
     return (
-        <Card className="col-md-3" style={{ width: '18rem' }}>
+        <Card className="col-md-3 mb-3">
             <Card.Img variant="top" src={img} />
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
