@@ -25,7 +25,7 @@ const Register = () => {
                 <input className="form-control" placeholder="Position" name="position" type="text" ref={register({ required: true })} />
                 {errors.position && <span className="text-danger">Position is required</span>}
                 <br />
-                <input type="submit" className="btn btn-primary mt-2 btn-block" />
+                <input type="submit" className="btn btn-success mt-2 btn-block" />
             </form >
         </div>
     );
