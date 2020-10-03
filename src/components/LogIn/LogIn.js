@@ -3,7 +3,6 @@ import { FcGoogle } from 'react-icons/fc';
 import * as firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebaseConfig';
-import { Link } from 'react-router-dom';
 firebase.initializeApp(firebaseConfig);
 
 const LogIn = () => {
@@ -29,10 +28,9 @@ const LogIn = () => {
             });
     }
     return (
-        <div className=" text-center">
+        <div className="text-center border p-3">
             <h4 className="mb-4">Login With</h4>
             <button className="btn rounded-pill border-secondary" onClick={handleGoogleSignIn}><FcGoogle /> Continue with Google</button>
-            <p className="mt-2">Don’t have an account? <Link className="text-decoration-none" to="/signup">Create an account</Link></p>
         </div>
     );
 };
