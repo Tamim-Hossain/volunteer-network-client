@@ -6,12 +6,14 @@ import LogIn from './components/LogIn/LogIn';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Register from './components/Register/Register';
 import Admin from './components/Admin/Admin';
+import NotFound from './components/NotFound/NotFound';
 
 export const UserContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({
-    email: ''
+    email: '',
+    name: ''
   });
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
@@ -30,6 +32,12 @@ function App() {
           <PrivateRoute path="/admin">
             <Admin />
           </PrivateRoute>
+          <PrivateRoute path="/event/:eventName">
+            <Register />
+          </PrivateRoute>
+          <Route path="*">
+            <NotFound />
+          </Route>
         </Switch>
       </Router>
     </UserContext.Provider>

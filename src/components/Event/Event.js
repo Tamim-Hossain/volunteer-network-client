@@ -1,13 +1,16 @@
+import { Link } from 'react-router-dom';
 import React from 'react';
 import { Card } from 'react-bootstrap';
 
 const Event = ({ event: { name, img } }) => {
     return (
-        <Card className="col-md-3 mb-3">
-            <Card.Img variant="top" src={img} />
-            <Card.Body>
-                <Card.Title>{name}</Card.Title>
-            </Card.Body>
+        <Card className="col-md-2 text-center m-3" >
+            <Link className="text-decoration-none" to={`/event/${name}`}>
+                <Card.Img variant="top" src={img} />
+                <Card.Body>
+                    <Card.Title>{name}</Card.Title>
+                </Card.Body>
+            </Link>
         </Card>
     );
 };
