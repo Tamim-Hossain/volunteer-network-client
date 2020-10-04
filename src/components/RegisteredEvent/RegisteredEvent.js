@@ -1,12 +1,11 @@
 import React from 'react';
 
-const RegisteredEvent = ({ regEvent: {regEvent:{ userName, email, eventName, date }} }) => {
+const RegisteredEvent = ({ regEvent: { regEvent: { eventName, date } } }) => {
     return (
-        <div>
-            <h2>{userName}</h2>
-            <h2>{email}</h2>
-            <h2>{eventName}</h2>
-            <h2>{date}</h2>
+        <div className="shadow-sm p-3 mb-2 bg-light rounded col-md-3 border m-3">
+            <h5>{eventName}</h5>
+            <p>Event Date: {date}</p>
+            <button className="btn btn-secondary">Cancel</button>
         </div>
     );
 };

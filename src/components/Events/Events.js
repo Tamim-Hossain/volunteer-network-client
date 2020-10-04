@@ -10,7 +10,7 @@ const Events = () => {
             .then(data => setRegisteredEvents(data))
     }, [])
     return (
-        <div>
+        <div className="row d-flex justify-content-around">
             {
                 registeredEvents.map(regEvent => <RegisteredEvent key={regEvent._id} regEvent={{ regEvent }} />)
             }
