@@ -28,7 +28,7 @@ const LogIn = () => {
             });
     }
     return (
-        <div className="text-center mt-5 border d-block p-5 rounded w-25 mx-auto border">
+        <div className="text-center mt-5 border d-block p-5 rounded w-50 mx-auto border">
             <h4 className="mb-4">Login With</h4>
             <button className="btn rounded-pill border-secondary" onClick={handleGoogleSignIn}><FcGoogle /> Continue with Google</button>
         </div>

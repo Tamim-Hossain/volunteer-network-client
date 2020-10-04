@@ -17,7 +17,8 @@ function App() {
     name: ''
   });
   return (
-    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+    <div className="container">
+      <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
         <Header />
         <Switch>
@@ -45,6 +46,7 @@ function App() {
         </Switch>
       </Router>
     </UserContext.Provider>
+    </div>
   );
 }
 

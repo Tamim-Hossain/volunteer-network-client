@@ -20,10 +20,8 @@ const Register = () => {
         })
             .then(res => res.json())
             .then(data => {
-                if (data) {
-                    alert('Registration Complete!');
-                    history.push('/events')
-                }
+                alert('Registration Complete!');
+                history.push('/events')
             })
     };
 

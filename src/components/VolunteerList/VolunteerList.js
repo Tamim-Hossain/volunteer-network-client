@@ -8,9 +8,7 @@ const VolunteerList = ({ volunteer: { userName, email, eventName, date, _id } })
         })
             .then((res) => res.json())
             .then((result) => {
-                if (result) {
-                    alert('Successfully Deleted!')
-                }
+                // alert('Successfully Deleted!')
             });
     };
     return (
@@ -29,7 +27,7 @@ const VolunteerList = ({ volunteer: { userName, email, eventName, date, _id } })
                     {eventName}
                 </div>
                 <div className="col-md-1">
-                    <RiDeleteBinFill className="text-danger" onClick={handleDashboardActions} style={{ cursor: 'pointer' }} />
+                    <RiDeleteBinFill className="text-danger" data-toggle="tooltip" title="Click to delete this event" onClick={handleDashboardActions} style={{ cursor: 'pointer' }} />
                 </div>
             </div>
             <hr />
