@@ -4,7 +4,7 @@ import Event from '../Event/Event';
 const Home = () => {
     const [events, setEvents] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:4000/events')
+        fetch('https://network-volunteer.herokuapp.com/events')
             .then(res => res.json())
             .then(data => setEvents(data))
     }, [])

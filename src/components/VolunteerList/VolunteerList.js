@@ -3,7 +3,7 @@ import { RiDeleteBinFill } from 'react-icons/ri';
 
 const VolunteerList = ({ volunteer: { userName, email, eventName, date, _id } }) => {
     const handleDashboardActions = () => {
-        fetch(`http://localhost:4000/delete/${_id}`, {
+        fetch(`https://network-volunteer.herokuapp.com/delete/${_id}`, {
             method: 'DELETE',
         })
             .then((res) => res.json())

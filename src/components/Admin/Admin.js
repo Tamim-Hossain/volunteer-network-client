@@ -4,7 +4,7 @@ import VolunteerList from '../VolunteerList/VolunteerList';
 const Admin = () => {
     const [volunteerList, setVolunteerList] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:4000/register')
+        fetch('https://network-volunteer.herokuapp.com/register')
             .then(res => res.json())
             .then(data => setVolunteerList(data))
     }, [volunteerList])
