@@ -2,7 +2,7 @@ import React from 'react';
 
 const RegisteredEvent = ({ regEvent: { regEvent: { eventName, date, _id } } }) => {
     const deleteRegistration = () => {
-        fetch(`http://localhost:4000/delete/${_id}`, {
+        fetch(`https://network-volunteer.herokuapp.com/delete/${_id}`, {
             method: 'DELETE',
         })
             .then((res) => res.json())
