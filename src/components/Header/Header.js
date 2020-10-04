@@ -26,12 +26,13 @@ const Header = () => {
                 <Nav className="ml-auto">
                     <Link to="/" className="btn m-1">Home</Link>
                     <Link to="#" className="btn m-1">Donation</Link>
-                    <Link to="#" className="btn m-1">Events</Link>
                     <Link to="#" className="btn m-1">Blog</Link>
-                    {loggedInUser.email ?
-                        <Link to="/" className="btn m-1 btn-info text-white" onClick={handleLogOut}>Logout</Link>
-                        :
-                        <Link to="/register" className="btn m-1 btn-info text-white">Register</Link>
+                    <Link to="/events" className="btn m-1">Events</Link>
+                    {
+                        loggedInUser.email ?
+                            <Link to="/" className="btn m-1 btn-warning" onClick={handleLogOut}>Log Out</Link>
+                            :
+                            <Link to="/register" className="btn m-1 btn-info text-white">Register</Link>
                     }
                     <Link to="/admin" className="btn m-1 btn-secondary text-white">Admin</Link>
                 </Nav>

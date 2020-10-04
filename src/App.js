@@ -7,6 +7,7 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Register from './components/Register/Register';
 import Admin from './components/Admin/Admin';
 import NotFound from './components/NotFound/NotFound';
+import Events from './components/Events/Events';
 
 export const UserContext = createContext();
 
@@ -34,6 +35,9 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/event/:eventName">
             <Register />
+          </PrivateRoute>
+          <PrivateRoute path="/events">
+            <Events />
           </PrivateRoute>
           <Route path="*">
             <NotFound />

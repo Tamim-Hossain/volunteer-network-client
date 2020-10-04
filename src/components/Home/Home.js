@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Event from '../Event/Event';
-import fakeData from '../fakeData/fakeData';
 
 const Home = () => {
+    const [events, setEvents] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:4000/events')
+            .then(res => res.json())
+            .then(data => setEvents(data))
+    }, [])
     return (
         <>
             <div className="text-center mb-3">
@@ -14,7 +19,7 @@ const Home = () => {
             </div>
             <div className="row">
                 {
-                    fakeData.map(event => <Event event={event} />)
+                    events.map(event => <Event event={event} key={event._id} />)
                 }
             </div>
         </>
