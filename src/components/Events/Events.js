@@ -8,7 +8,7 @@ const Events = () => {
         fetch('http://localhost:4000/register')
             .then(res => res.json())
             .then(data => setRegisteredEvents(data))
-    }, [])
+    }, [registeredEvents])
     return (
         <div className="row d-flex justify-content-around">
             {

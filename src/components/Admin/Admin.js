@@ -7,7 +7,7 @@ const Admin = () => {
         fetch('http://localhost:4000/register')
             .then(res => res.json())
             .then(data => setVolunteerList(data))
-    }, [])
+    }, [volunteerList])
     return (
         <div className="container">
             <div className="row bg-light font-weight-bold">
