@@ -22,7 +22,7 @@ const AddEvent = () => {
 
     return (
         <div className="mx-auto border p-4 rounded" style={{ width: '40%' }}>
-            <h3 className="font-weight-bold text-center">Add a new event</h3>
+            <h3 className="font-weight-bold text-center">Add new event</h3>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <label htmlFor="name">Host Name</label>
                 <input className="form-control" id="name" placeholder="Full name" name="name" type="text" ref={register({ required: true })} />
@@ -40,14 +40,10 @@ const AddEvent = () => {
                 <input className="form-control" id="date" placeholder="Select date" name="date" type="date" ref={register({ required: true })} />
                 {errors.date && <span className="text-danger">Event date is required</span>}
                 <br />
-                <label htmlFor="description">Event Description</label>
-                <textarea className="form-control" id="description" placeholder="Write description here..." name="description" type="text" ref={register({ required: true })} />
-                {errors.description && <span className="text-danger">Event description is required</span>}
-                <br />
                 <label htmlFor="img">Event Banner (Optional)</label>
                 <input id="img" type="file" ref={register({ required: false })} />
                 <br />
-                <input type="submit" className="btn btn-success mt-2 btn-block" value="Create Event" />
+                <input type="submit" className="btn btn-success mt-3 btn-block" value="Create Event" />
             </form >
         </div>
     );
