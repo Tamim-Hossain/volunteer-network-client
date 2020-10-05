@@ -10,7 +10,7 @@ const Register = () => {
     const { eventName } = useParams();
     let today = new Date().toISOString().slice(0, 10);
     const onSubmit = data => {
-        fetch('https://network-volunteer.herokuapp.com/register', {
+        fetch('https://network-volunteer.herokuapp.com/register?email=' + loggedInUser.email, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
