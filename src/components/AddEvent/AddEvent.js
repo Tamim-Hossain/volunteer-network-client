@@ -5,8 +5,6 @@ import { useHistory, useParams } from 'react-router-dom';
 const AddEvent = () => {
     let history = useHistory();
     const { register, handleSubmit, errors } = useForm();
-    const { eventName } = useParams();
-    let today = new Date().toISOString().slice(0, 10);
     const onSubmit = data => {
         fetch('https://network-volunteer.herokuapp.com/register', {
             method: 'POST',

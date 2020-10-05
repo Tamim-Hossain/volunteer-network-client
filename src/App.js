@@ -41,7 +41,7 @@ function App() {
             <PrivateRoute path="/events">
               <Events />
             </PrivateRoute>
-            <PrivateRoute path="/add">
+            <PrivateRoute path="/create">
               <AddEvent />
             </PrivateRoute>
             <Route path="*">

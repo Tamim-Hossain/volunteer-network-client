@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import VolunteerList from '../VolunteerList/VolunteerList';
+import { BiCalendarPlus } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 
 const Admin = () => {
     const [volunteerList, setVolunteerList] = useState([]);
@@ -10,6 +12,9 @@ const Admin = () => {
     }, [volunteerList])
     return (
         <div className="container">
+            <div className="d-flex justify-content-end mb-2">
+            <Link className="btn btn-secondary text-decoration-none" to="/create"><BiCalendarPlus /> Add New Event</Link>
+            </div>
             <div className="row bg-light font-weight-bold">
                 <div className="col-md-2">
                     <p>Name</p>
