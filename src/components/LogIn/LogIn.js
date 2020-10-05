@@ -24,7 +24,7 @@ const LogIn = () => {
                 history.replace(from);
             })
             .catch((error) => {
-                console.log(error.code);
+                // console.log(error.code);
             });
     }
     return (

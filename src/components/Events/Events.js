@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../../App';
 import RegisteredEvent from '../RegisteredEvent/RegisteredEvent';
 
 const Events = () => {
     const [registeredEvents, setRegisteredEvents] = useState([]);
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     useEffect(() => {
-        fetch('https://network-volunteer.herokuapp.com/register')
+        fetch('https://network-volunteer.herokuapp.com/selected-register?email=' + loggedInUser.email)
             .then(res => res.json())
             .then(data => setRegisteredEvents(data))
     }, [registeredEvents])
