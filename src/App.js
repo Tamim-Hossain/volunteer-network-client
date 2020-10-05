@@ -6,7 +6,6 @@ import LogIn from './components/LogIn/LogIn';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Register from './components/Register/Register';
 import Admin from './components/Admin/Admin';
-import NotFound from './components/NotFound/NotFound';
 import Events from './components/Events/Events';
 import AddEvent from './components/AddEvent/AddEvent';
 
@@ -45,7 +44,7 @@ function App() {
               <AddEvent />
             </PrivateRoute>
             <Route path="*">
-              <NotFound />
+              <img className="mx-auto d-block img-fluid" src="https://image.freepik.com/free-vector/404-liquid-error_114341-59.jpg" alt="" />
             </Route>
           </Switch>
         </Router>

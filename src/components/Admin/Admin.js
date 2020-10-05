@@ -13,7 +13,7 @@ const Admin = () => {
     return (
         <div className="container">
             <div className="d-flex justify-content-end mb-2">
-            <Link className="btn btn-secondary text-decoration-none" to="/create"><BiCalendarPlus /> Add New Event</Link>
+                <Link className="btn btn-secondary text-decoration-none" to="/create"><BiCalendarPlus /> Add New Event</Link>
             </div>
             <div className="row bg-light font-weight-bold">
                 <div className="col-md-2">
