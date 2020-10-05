@@ -1,7 +1,7 @@
 import React from 'react';
 import { RiDeleteBinFill } from 'react-icons/ri';
 
-const VolunteerList = ({ volunteer: { userName, email, eventName, date, _id } }) => {
+const VolunteerList = ({ volunteer: { name, email, task, date, _id } }) => {
     const handleDashboardActions = () => {
         fetch(`https://network-volunteer.herokuapp.com/delete/${_id}`, {
             method: 'DELETE',
@@ -15,7 +15,7 @@ const VolunteerList = ({ volunteer: { userName, email, eventName, date, _id } })
         <>
             <div className="row">
                 <div className="col-md-2">
-                    {userName}
+                    {name}
                 </div>
                 <div className="col-md-3">
                     {email}
@@ -24,7 +24,7 @@ const VolunteerList = ({ volunteer: { userName, email, eventName, date, _id } })
                     {date}
                 </div>
                 <div className="col-md-4">
-                    {eventName}
+                    {task}
                 </div>
                 <div className="col-md-1">
                     <RiDeleteBinFill className="text-danger" data-toggle="tooltip" title="Click to delete this event" onClick={handleDashboardActions} style={{ cursor: 'pointer' }} />

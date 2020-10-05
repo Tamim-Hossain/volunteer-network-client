@@ -10,13 +10,12 @@ const Register = () => {
     const { eventName } = useParams();
     let today = new Date().toISOString().slice(0, 10);
     const onSubmit = data => {
-        const details = { userName: loggedInUser.displayName, email: loggedInUser.email, eventName: eventName, date: today };
         fetch('https://network-volunteer.herokuapp.com/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(details)
+            body: JSON.stringify(data)
         })
             .then(res => res.json())
             .then(data => {
@@ -49,7 +48,7 @@ const Register = () => {
                 <textarea className="form-control" id="description" placeholder="Write description here..." name="description" type="text" ref={register({ required: true })} />
                 {errors.description && <span className="text-danger">Description is required</span>}
                 <br />
-                <input type="submit" className="btn btn-success mt-2 btn-block" />
+                <input type="submit" className="btn btn-success mt-2 btn-block" value="Register" />
             </form >
         </div>
     );

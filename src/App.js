@@ -8,6 +8,7 @@ import Register from './components/Register/Register';
 import Admin from './components/Admin/Admin';
 import NotFound from './components/NotFound/NotFound';
 import Events from './components/Events/Events';
+import AddEvent from './components/AddEvent/AddEvent';
 
 export const UserContext = createContext();
 
@@ -19,33 +20,36 @@ function App() {
   return (
     <div className="container">
       <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-      <Router>
-        <Header />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/login">
-            <LogIn />
-          </Route>
-          <PrivateRoute path="/register">
-            <Register />
-          </PrivateRoute>
-          <PrivateRoute path="/admin">
-            <Admin />
-          </PrivateRoute>
-          <PrivateRoute path="/event/:eventName">
-            <Register />
-          </PrivateRoute>
-          <PrivateRoute path="/events">
-            <Events />
-          </PrivateRoute>
-          <Route path="*">
-            <NotFound />
-          </Route>
-        </Switch>
-      </Router>
-    </UserContext.Provider>
+        <Router>
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/login">
+              <LogIn />
+            </Route>
+            <PrivateRoute path="/register">
+              <Register />
+            </PrivateRoute>
+            <PrivateRoute path="/admin">
+              <Admin />
+            </PrivateRoute>
+            <PrivateRoute path="/event/:eventName">
+              <Register />
+            </PrivateRoute>
+            <PrivateRoute path="/events">
+              <Events />
+            </PrivateRoute>
+            <PrivateRoute path="/add">
+              <AddEvent />
+            </PrivateRoute>
+            <Route path="*">
+              <NotFound />
+            </Route>
+          </Switch>
+        </Router>
+      </UserContext.Provider>
     </div>
   );
 }
