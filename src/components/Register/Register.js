@@ -19,7 +19,7 @@ const Register = () => {
         })
             .then(res => res.json())
             .then(data => {
-                alert('Registration Complete!');
+                alert('Registration Complete! Redirecting to your hosted events dashboard.');
                 history.push('/events');
             })
     };

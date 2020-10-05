@@ -15,7 +15,7 @@ const AddEvent = () => {
         })
             .then(res => res.json())
             .then(data => {
-                alert('Event Created Successfully!');
+                alert('Event created successfully. Redirecting to admin dashboard.');
                 history.push('/admin')
             })
     };
