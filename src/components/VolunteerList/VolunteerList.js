@@ -8,7 +8,7 @@ const VolunteerList = ({ volunteer: { name, email, task, date, _id } }) => {
         })
             .then((res) => res.json())
             .then((result) => {
-                // alert('Successfully deleted!')
+                alert('Successfully deleted!')
             });
     };
     return (

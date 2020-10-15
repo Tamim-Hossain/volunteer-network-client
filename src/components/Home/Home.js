@@ -19,6 +19,9 @@ const Home = () => {
             </div>
             <div className="row">
                 {
+                    events.length === 0 && <img style={{ margin: 'auto' }} className="img-fluid mt-5" src="https://miro.medium.com/max/700/1*CsJ05WEGfunYMLGfsT2sXA.gif" alt="" />
+                }
+                {
                     events.map(event => <Event event={event} key={event._id} />)
                 }
             </div>

@@ -7,7 +7,7 @@ const RegisteredEvent = ({ regEvent: { regEvent: { task, date, _id, name } } }) 
         })
             .then((res) => res.json())
             .then((result) => {
-                // alert('Successfully deleted!')
+                alert('Successfully deleted!')
             });
     };
     return (
